@@ -75,6 +75,7 @@ li{
   width: 100%;
 }
 #articlesContainer{
+  background: #f6f6f6;
   border-radius: 5px;
   box-shadow: 0 2px 8px #777777;
   margin: 35px 50px 20px 5px;
