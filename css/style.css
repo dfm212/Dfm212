@@ -1,0 +1,177 @@
+/*============================
+=========== GLOVAL ===========
+============================*/
+body{
+  background: #f2f2f2 !important;
+}
+a{
+  padding: none !important;
+  text-decoration: none;
+
+}
+li{
+  list-style-type: none !important;
+}
+.navbar-brand{
+  margin-left: 20px !important;
+}
+.navbar-right{
+  margin-right: 20px !important;
+}
+.col-md-4{
+  padding: 0 !important;
+}
+#mainTitle{
+  margin-right: 25px;
+}
+#mainTitle h2{
+  margin-top: 10px;
+}
+#twitterContainer{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px #777777;
+  margin: 35px 0 0 0;
+  padding: 3px;
+  width: 100%;
+  max-width: 615px;
+}
+#articlesContainer{
+  padding: 0 35px 0 0;
+}
+.contentDivision{
+  background: #cccccc;
+  box-shadow: 0 3px 10px #777777;
+  height: 50px;
+}
+.navbar.navbar-default{
+  margin: 0;
+}
+.navbar-default .navbar-brand{
+  color: white !important;
+  font-weight: bolder;
+}
+.navbar-default .navbar-nav>li>a{
+  color: white !important;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  background: red;
+  color: white !important;
+}
+/*============================
+=========== HEADER ===========
+============================*/
+.navbar-default{
+  background: #ff6600 !important;
+  color: white;
+}
+.git, .linkedin{
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+}
+#nav-content{
+  margin-top: 15px;
+}
+/*============================
+=========== slide ==========
+============================*/
+.container-fluid{
+  padding: 0 !important;
+}
+
+
+/*#slider{
+  position: inherit;
+}
+#slider .slides{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#slider .slide{
+  float: left;
+  list-style-type: none;
+}*/
+/*============================
+=========== SECTION ==========
+============================*/
+.moduloContainer,{
+  display: inline-block;
+  padding: 0;
+}
+.tittlesContainer{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px #777777;
+  margin: 35px 5px 10px 5px;
+  padding: 1px 0 1px 0;
+}
+.pinWrapper{
+  border-radius: 5px;
+  box-shadow: 0 2px 8px #777777;
+  margin: 20px 5px 20px 5px;
+  padding: 3px;
+}
+.articlesStyle{
+  background: #99cc66;
+  border-radius: 5px 5px 0 0;
+  height: 15px;
+  width: 100%;
+}
+.articleStyleEnd{
+  background: #99cc66;
+  border-radius: 0 0 5px 5px;
+  height: 30px;
+  width: 100%;
+}
+.webStyle{
+  background: #188ad7;
+  border-radius: 5px 5px 0 0;
+  height: 15px;
+  width: 100%;
+}
+.webStyleEnd{
+  background: #188ad7;
+  border-radius: 0 0 5px 5px;
+  height: 30px;
+  width: 100%;
+}
+.webStyleEnd h4{
+  padding-top: 5px;
+  margin-top: 0;
+}
+a .webStyleEnd{
+  color: white;
+  font-weight: bolder;
+}
+.appStyle{
+  background: #ff9933;
+  border-radius: 5px 5px 0 0;
+  height: 15px;
+  width: 100%;
+}
+.appStyleEnd{
+  background: #ff9933;
+  border-radius: 0 0 5px 5px;
+  height: 30px;
+  width: 100%;
+}
+.pintImg{
+  border-radius: 5px 5px 0 0;
+  height: 100%;
+  width:100%;
+}
+.pintArt{
+  background: #e8e8e8;
+  height: 100%;
+  padding: 5px;
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .navbar-nav>li>a{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

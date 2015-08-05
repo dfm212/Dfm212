@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="css\style.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+
+
+
+
+
+  <title>Blog-HOME</title>
+
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://dfm212.github.io/Blog-Dfm212/">Home</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul id="nav-content" class="nav navbar-nav">
+            <li><a href="http://dfm212.github.io/frontend-nanodegree-resume/">Bio</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Projects</a></li>
+          </ul>
+          <div id="socialLogos">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/dfm212"><img class="git" src="img\home\git.png" alt="GitHubLogo"></a></li><!-- Github -->
+              <li><a href="https://www.linkedin.com/in/danielfm212/en"><img class="linkedin" src="img\home\LinkedIn.png" alt="LinkedindLogo"></a></li><!-- linkedin -->
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="container-fluid text-center"><!--CAROUSEL-->
+      <div id="carousel-main" class="carousel slide" data-ride="carousel">
+        <!--END-indicator structor-->
+        <!--INICIO-img carousel-->
+        <div class="carousel-inner" role="listbox">
+          <figure class="item active">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home01.jpg" alt="Untitled-1.png">
+          </figure>
+          <figure class="item">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home02.png" alt="Untitled-7.png">
+          </figure>
+          <figure class="item">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home03.png" alt="Untitled-3.png">
+          </figure>
+          <figure class="item">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home01.jpg" alt="Untitled-4.png">
+          </figure>
+          <!--END-img carousel-->
+        </div><!--CAROUSEL-->
+
+      </div>
+    </div><!--END-carousel-->
+
+
+
+
+    <!-- <div id="slider">
+      <ul class="slides">
+        <li class="slide" ><img class="img-responsive" src="img\home\home01.jpg" alt="mainImg"></li>
+        <li class="slide" ><img class="img-responsive" src="img\home\home02.png" alt="mainImg"></li>
+        <li class="slide" ><img class="img-responsive" src="img\home\home03.png" alt="mainImg"></li>
+        <li class="slide" ><img class="img-responsive" src="img\home\home04.png" alt="mainImg"></li>
+        <li class="slide" ><img class="img-responsive" src="img\home\home01.jpg" alt="mainImg"></li>
+      </ul>
+    </div> -->
+
+    <div id="mainTitle" class="container-fluid text-right"><h2>Blog/Portfolio<br>@Dfm212 Front-end Developer</h2></div>
+
+    <div class="divisor">
+      <div class="contentDivision container-fluid"></div>
+    </div>
+
+  </header>
+
+  <aside class="col-md-2"><!-- Twitter -->
+
+    <div id="twitterContainer">
+
+      <a class="twitter-timeline" href="https://twitter.com/Dfm212" data-widget-id="628715322980335616">Tweets por el @Dfm212.</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    </div><!-- /tiwtterContainer -->
+
+  </aside>
+
+  <!-- ArticlesContainer -->
+  <section id="articlesContainer" class="col-md-10">
+
+    <div"container-fluid"><!-- Divisors Titles -->
+
+      <div id="ArticlesContainer" class="col-md-4">
+
+        <div class="tittlesContainer  text-center"><h3>Blog/Articles</h3></div>
+
+        <div class="modulo">
+          <div class="pinWrapper">
+            <div class="articlesStyle"></div>
+            <div class="artImg pintImg"><a href="http://dfm212.github.io/first-web/"><img class="img-responsive" src="img\Construction\art001.png" alt="img first web"></a></div>
+            <div class="pintArt">
+              <div class="artTitle"><h3>Title:Chasing Mavericks</h3></div>               <!-- change for => %data% -->
+              <div class="artDescription">Description:This is who & why we start</div>   <!-- change for => %data% -->
+            </div>
+            <div class="articleStyleEnd"></div>
+          </div>
+        </div>
+
+      </div><!-- /ArticlesContainer -->
+
+      <!-- Websites -->
+      <div id="Websites" class="col-md-4">
+
+        <div class="tittlesContainer text-center"><h3>Websites</h3></div>
+
+        <div class="modulo">
+          <div class="pinWrapper">
+            <div class="webStyle"></div>
+            <div class="webImg pintImg"><a href="http://dfm212.github.io/ClickCat/"><img class="img-responsive" src="img\Construction\retoSite(+).jpg" alt="OneSitePerDay"></a></div>                           <!-- change for => %data% -->
+            <div class="pintArt">
+              <div class="artTitle"><h3>Title:Project One website per day</h3></div>                                                                                 <!-- change for => %data% -->
+              <div class="artDescription">Description:Practise, practise, practise</div>                                                                             <!-- change for => %data% -->
+            </div>
+            <a href="https://github.com/dfm212/ClickCat"><div class="webStyleEnd text-center"><h4>GitHub</h4></div></a>
+          </div>
+        </div>
+
+        <div class="modulo">
+          <div class="pinWrapper">
+            <div class="webStyle"></div>
+            <div class="webImg pintImg"><a href="http://dfm212.github.io/CamiloSite/"><img class="img-responsive" src="img\Construction\cami.png" alt="camiloSite"></a></div>     <!-- change for => %data% -->
+            <div class="pintArt">
+              <div class="artTitle"><h3>Title:Camilo Site</h3></div>                                                                                                 <!-- change for => %data% -->
+              <div class="artDescription">Description:A little challenge</div>                                                                                       <!-- change for => %data% -->
+            </div>
+            <a href="https://github.com/dfm212/CamiloSite"><div class="webStyleEnd text-center"><h4>GitHub</h4></div></a>
+          </div>
+        </div>
+
+        <div class="modulo">
+          <div class="pinWrapper">
+            <div class="webStyle"></div>
+            <div class="webImg pintImg"><a href="http://dfm212.github.io/first-web/"><img class="img-responsive" src="img\Construction\final.png" alt="img first web"></a></div>  <!-- change for => %data% -->
+            <div class="pintArt">
+              <div class="artTitle"><h3>Title:My First Website</h3></div>                                                                                            <!-- change for => %data% -->
+              <div class="artDescription">Description:You need the theory but practise makes perfection</div>                                                        <!-- change for => %data% -->
+            </div>
+            <a href="https://github.com/dfm212/first-web"><div class="webStyleEnd text-center"><h4>GitHub</h4></div></a>
+          </div>
+        </div>
+
+      </div><!-- /Websites -->
+
+      <!-- App's -->
+      <div class="col-md-4">
+
+        <div class="tittlesContainer text-center"><h3>App's</h3></div>
+
+        <div class="modulo">
+          <div class="pinWrapper">
+            <div class="appStyle"></div>
+            <div class="appImg"><a href="#"><img class="img-responsive" src="img\home\construction.png" alt="under construction"></a></div>  <!-- change for => %data% -->
+            <div class="pintArt">
+              <div class="artTitle"><h3>Title:Soon</h3></div>                                                   <!-- change for => %data% -->
+              <div class="artDescription">Description:></div>                                     <!-- change for => %data% -->                                                                                    <!-- change for => %data% -->
+            </div>
+            <div class="appStyleEnd"></div>
+          </div>
+        </div>
+
+      </div><!-- /App's -->
+
+    </div><!-- /Divisors Titles -->
+
+  </section>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js\app.js"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
