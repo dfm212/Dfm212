@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="IndexPost">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+  <!-- Angular.js -->
+  <script type="text/javascript" src="js\angular.min.js"></script>
+  <script type="text/javascript" src="js\app.js"></script>
+  <script type="text/javascript" src="js\helper.js"></script>
 
 
 
 
 
   <title>Blog-HOME</title>
-
-
 </head>
-<body>
+
+
+<body ng-controller="contentController as posted">
+
   <header>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -61,39 +66,25 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-
     <div class="container-fluid text-center"><!--CAROUSEL-->
       <div id="carousel-main" class="carousel slide" data-ride="carousel">
         <!--END-indicator structor-->
         <!--INICIO-img carousel-->
         <div class="carousel-inner" role="listbox">
           <figure class="item active">
-            <img class="img-responsive" id="ejemploimg0" src="img\home\home01.png" alt="Untitled-1.png">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home01.jpg" alt="Untitled-1.png">
           </figure>
           <figure class="item">
-            <img class="img-responsive" id="ejemploimg0" src="img\home\home02.png" alt="Untitled-7.png">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home02.jpg" alt="Untitled-7.png">
           </figure>
           <figure class="item">
-            <img class="img-responsive" id="ejemploimg0" src="img\home\home03.png" alt="Untitled-3.png">
+            <img class="img-responsive" id="ejemploimg0" src="img\home\home03.jpg" alt="Untitled-3.png">
           </figure>
           <!--END-img carousel-->
         </div><!--CAROUSEL-->
 
       </div>
     </div><!--END-carousel-->
-
-
-
-
-    <!-- <div id="slider">
-      <ul class="slides">
-        <li class="slide" ><img class="img-responsive" src="img\home\home01.jpg" alt="mainImg"></li>
-        <li class="slide" ><img class="img-responsive" src="img\home\home02.png" alt="mainImg"></li>
-        <li class="slide" ><img class="img-responsive" src="img\home\home03.png" alt="mainImg"></li>
-        <li class="slide" ><img class="img-responsive" src="img\home\home04.png" alt="mainImg"></li>
-        <li class="slide" ><img class="img-responsive" src="img\home\home01.jpg" alt="mainImg"></li>
-      </ul>
-    </div> -->
 
     <div id="mainTitle" class="container-fluid text-right"><h2>Blog/Portfolio<br>@Dfm212 Front-end Developer</h2></div>
 
@@ -102,6 +93,7 @@
     </div>
 
   </header>
+
 
   <aside class="col-md-2"><!-- Twitter -->
 
@@ -114,29 +106,19 @@
 
   </aside>
 
+
   <!-- ArticlesContainer -->
   <section id="articlesContainer" class="col-md-10">
 
     <div"container-fluid"><!-- Divisors Titles -->
 
-      <div id="ArticlesContainer" class="col-md-4">
+      <div id="ArticlesContainer" class="col-md-4" ng>
 
         <div class="tittlesContainer  text-center"><h3>Blog/Binnacle</h3></div>
 
-        <div class="modulo">
-          <div class="pinWrapper">
-            <div class="articlesStyle"></div>
-            <div class="artImg pintImg"><a href="http://dfm212.github.io/Dfm212/articles/TheOrigin-000001"><img class="img-responsive" src="img\Construction\art001.png" alt="img first web"></a></div>
-            <div class="pintArt">
-              <div class="artTitle"><h3>Beginnings</h3></div>               <!-- change for => %data% -->
-              <div class="artDescription">This is how & why I start</div>   <!-- change for => %data% -->
-            </div>
-            <div class="articleStyleEnd"></div>
-          </div>
-        </div>
-
-        <div class="modulo">
-          <div class="pinWrapper">
+        <!-- This need some refreaction on app.js and change the content -->
+        <div class="modulo"><!-- binnacle -->
+          <div class="pinWrapper" >
             <div class="articlesStyle"></div>
             <div class="artImg pintImg"><a href="http://dfm212.github.io/Dfm212/Binnacle/Binnacle"><img class="img-responsive" src="img\Construction\binnacle.png" alt="img first web"></a></div>
             <div class="pintArt">
@@ -147,51 +129,42 @@
           </div>
         </div>
 
+        <div class="modulo"><!-- articles -->
+          <div class="pinWrapper" ng-repeat="public in posted.art">
+            <div class="articlesStyle"></div>
+            <!-- need to change the img for one img from angular app -->
+            <div class="artImg pintImg"><a href="http://dfm212.github.io/Dfm212/articles/TheOrigin-000001"><img class="img-responsive" src="img\Construction\art001.png" alt="img first web"></a></div>
+            <div class="pintArt">
+              <div class="artTitle"><h3>{{public.tittle}}</h3></div>
+              <div class="artDescription">{{public.summary}}</div>
+            </div>
+            <div class="articleStyleEnd"></div>
+          </div>
+        </div>
+
+
       </div><!-- /ArticlesContainer -->
 
       <!-- Websites -->
-      <div id="Websites" class="col-md-4">
+      <div class="col-md-4">
 
         <div class="tittlesContainer text-center"><h3>Websites</h3></div>
 
-<!-- Need to change de link
-is taking to the wrogh site -->
-
-        <div class="modulo">
+        <div class="modulo"  ng-repeat="public in posted.web">
           <div class="pinWrapper">
             <div class="webStyle"></div>
-            <div class="webImg pintImg"><a href="http://dfm212.github.io/oneWebsitePerDay/"><img class="img-responsive" src="img\Construction\retoSite(+).jpg" alt="OneSitePerDay"></a></div>                           <!-- change for => %data% -->
+            <div class="webImg pintImg"><a ng-href="{{public.link}}"><img ng-src="{{public.imgThumb}}" class="img-responsive"  alt="OneSitePerDay"></a></div>                           <!-- change for => %data% -->
             <div class="pintArt">
-              <div class="artTitle"><h3>Project One website per day</h3></div>                                                                                 <!-- change for => %data% -->
-              <div class="artDescription">Practise, practise, practise</div>                                                                             <!-- change for => %data% -->
+              <div class="artTitle"><h3 id="name">{{public.name}}</h3></div>
+              <div class="artDescription" id="description">{{public.description}}</div>
             </div>
-            <a href="https://github.com/dfm212/oneWebsitePerDay"><div class="webStyleEnd text-center"><h4>GitHub</h4></div></a>
-          </div>
-        </div>
-<!-- Need to fix the site for better performances -->
-        <div class="modulo">
-          <div class="pinWrapper">
-            <div class="webStyle"></div>
-            <div class="webImg pintImg"><a href="http://dfm212.github.io/CamiloSite/"><img class="img-responsive" src="img\Construction\cami.png" alt="camiloSite"></a></div>     <!-- change for => %data% -->
-            <div class="pintArt">
-              <div class="artTitle"><h3>Camilo Site</h3></div>                                                                                                 <!-- change for => %data% -->
-              <div class="artDescription">A little challenge</div>                                                                                       <!-- change for => %data% -->
-            </div>
-            <a href="https://github.com/dfm212/CamiloSite"><div class="webStyleEnd text-center"><h4>GitHub</h4></div></a>
+            <a ng-href="{{public.gitGub}}"><div class="nav webStyleEnd text-center"><h4>GitHub</h4></div></a>
           </div>
         </div>
 
-        <div class="modulo">
-          <div class="pinWrapper">
-            <div class="webStyle"></div>
-            <div class="webImg pintImg"><a href="http://dfm212.github.io/first-web/"><img class="img-responsive" src="img\Construction\final.png" alt="img first web"></a></div>  <!-- change for => %data% -->
-            <div class="pintArt">
-              <div class="artTitle"><h3>My First Website</h3></div>                                                                                            <!-- change for => %data% -->
-              <div class="artDescription">You need the theory but practise makes perfection</div>                                                        <!-- change for => %data% -->
-            </div>
-            <a href="https://github.com/dfm212/first-web"><div class="webStyleEnd text-center"><h4>GitHub</h4></div></a>
-          </div>
-        </div>
+
+
+
 
       </div><!-- /Websites -->
 
@@ -212,6 +185,7 @@ is taking to the wrogh site -->
           </div>
         </div>
 
+
       </div><!-- /App's -->
 
     </div><!-- /Divisors Titles -->
@@ -222,9 +196,17 @@ is taking to the wrogh site -->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js\app.js"></script>
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- The next line tells the browser where to download the JavaScript file you'll be -->
+  <script type="text/javascript" src="js\articles.js"></script>
+  <script type="text/javascript" src="js\comments.js"></script>
+  <script type="text/javascript" src="js\websites.js"></script>
+
+
+
+
 </body>
 </html>
