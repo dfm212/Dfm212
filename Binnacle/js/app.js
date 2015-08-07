@@ -1,8 +1,8 @@
 (function(){
 
-  var app = angular.module('BinnaclePost', []);
+  var app = angular.module('IndexPost', []);
 
-  app.controller('PostController',function(){
+  app.controller('contentController',function(){
     this.post = comments;
   });
 
@@ -22,5 +22,5 @@
         "createdOn": "Oct-03-2015"
       },
     ];
-    
+
 })();
