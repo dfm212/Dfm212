@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="BinnaclePost">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- stylesheet -->
-  <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href="Binnacle\css\style.css">
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-
+  <script type="text/javascript" src="js\angular.min.js"></script>
+  <script type="text/javascript" src="Binnacle\js\app.js"></script>
 
 
 
@@ -21,7 +22,7 @@
 
 
 </head>
-<body>
+<body ng-controller="PostController as posted">
   <header>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -64,7 +65,7 @@
 
 
     <figure class="item active">
-      <img id="mainIng" class="theWay container-fluid" src="img\Binnacle\binnacle.png" alt="mainImg">
+      <img id="mainIng" class="theWay container-fluid" src="Binnacle\img\binnacle.jpg" alt="mainImg">
     </figure>
 
 
@@ -91,26 +92,11 @@
   <!-- ArticlesContainer -->
   <article class="col-md-10">
 
-    <div id="articlesContainer" >
-      <ol>
-        <li class="articles"><time class="navbar-right">08-05-2015</time>
-          <h2>Post #002</h2><time datetime="2015-08-04T08:00">
-          <div class="article">
-            I have dedicated this morning working on my blog/portfolio and the all afternoon I started to practice Angular.
-          </div>
-        </li>
-        <li class="articles"><time class="navbar-right">08-04-2015</time>
-          <h2>Post #001</h2><time datetime="2015-08-04T08:00">
-          <div>
-            I spend the day working on my blog/portfolio; I uploaded the first piece of content (articles and binnacle), plus the first web for the project “one website per day”.<br>
-            I didn't get enough time to start to practice Angular.
-          </div>
-        </li>
-        <li class="articles"><time class="navbar-right">08-03-2015</time>
-          <h2>start</h2><time datetime="2015-08-04T08:00">
-          <div>
-            Today I had the idea and decision to start a binnacle for track my progress as young developer. This is useful for make an evaluation of my performance. Detect my weaknesses and follow my daily progress.<br>
-            With this resource, I will be able to trace the way to follow and correct the course if I need it          </div>
+    <div id="articlesContainer">
+      <ol ng-repeat="public in posted.post">
+        <li class="articles"><div class="pull-right">{{public.createdOn}}</div>
+          <h2>Post # </h2>
+          <div class="article">{{public.comment}}</div>
         </li>
       </ol>
 
@@ -124,7 +110,6 @@
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js\app.js"></script>
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
