@@ -10,34 +10,34 @@
 
 
 
-  app.directive("articlesData", function() {
-    return {
-      restrict: 'E',
-      templateUrl: "helper.html"
-    };
-  });
-
-
-  app.directive("articlesData", function() {
-    return {
-      restrict: 'E',
-      templateUrl: "articles.html"
-    };
-  });
-
-  app.directive("commentsData", function() {
-    return {
-      restrict: 'E',
-      templateUrl: "comments.html"
-    };
-  });
-
-  app.directive("websitesData", function() {
-    return {
-      restrict: 'E',
-      templateUrl: "websites.html"
-    };
-  });
+  // app.directive("articlesData", function() {
+  //   return {
+  //     restrict: 'E',
+  //     templateUrl: "helper.html"
+  //   };
+  // });
+  //
+  //
+  // app.directive("articlesData", function() {
+  //   return {
+  //     restrict: 'E',
+  //     templateUrl: "articles.html"
+  //   };
+  // });
+  //
+  // app.directive("commentsData", function() {
+  //   return {
+  //     restrict: 'E',
+  //     templateUrl: "comments.html"
+  //   };
+  // });
+  //
+  // app.directive("websitesData", function() {
+  //   return {
+  //     restrict: 'E',
+  //     templateUrl: "websites.html"
+  //   };
+  // });
 
 
 
