@@ -115,7 +115,6 @@
 
         <div class="tittlesContainer  text-center"><h3>Blog/Binnacle</h3></div>
 
-        <!-- This need some refreaction on app.js and change the content -->
         <div class="modulo"><!-- binnacle -->
           <div class="pinWrapper" >
             <div class="articlesStyle"></div>
@@ -126,19 +125,19 @@
             </div>
             <div class="articleStyleEnd"></div>
           </div>
-        </div>
-
-        <div class="modulo"><!-- articles -->
+        </div><!-- /binnacle -->
+        <!-- articles -->
+        <div class="modulo">
           <div class="pinWrapper" ng-repeat="public in posted.art">
             <div class="articlesStyle"></div>
-            <div class="artImg pintImg"><a ng-href="{{public.link}}"><img ng-src="articles\img\article\{{public.imgThumb}}" class="img-responsive" alt="img first web"></a></div>
+            <div class="artImg pintImg"><a ng-href="{{public.link}}"><img ng-src="articles\img\article\{{public.imgFull}}" class="img-responsive" alt="img first web"></a></div>
             <div class="pintArt">
               <div class="artTitle"><h3>{{public.tittle}}</h3></div>
               <div class="artDescription">{{public.summary}}</div>
             </div>
             <div class="articleStyleEnd"></div>
           </div>
-        </div>
+        </div><!-- /articles -->
 
       </div><!-- /ArticlesContainer -->
 
