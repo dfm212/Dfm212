@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="IndexPost">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +11,16 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-
-
-
+  <!-- Angular.js -->
+  <script type="text/javascript" src="js\angular.min.js"></script>
+  <script type="text/javascript" src="js\app.js"></script>
 
 
   <title>Blog-HOME</title>
 
 
 </head>
-<body>
+<body ng-controller="contentController as posted">
   <header>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -91,24 +90,12 @@
   <!-- ArticlesContainer -->
   <article class="col-md-10">
 
-    <div id="articlesContainer" >
-      <h2>Beginnings</h2>
-      <div>
-        If you love challenge, if you have the ability to learn by yourself new stuff all the time and technology is your passion. Become a software developer could be the right way for you. <br>
-I undertake this journey more or less 3 months ago. It has been challenging but an exciting decision. The way how step by step you start to build something from scratch. Getting new knowledge every day and discover how the world the surrounds us is evolving, is just fascinating!<br>
-Even, sometimes it can be overwhelming, especially if has me, you are new in this world. <br>
-But the speed how everything is evolving challenges you and pushes you to keep learning. And ones you start to realize the endless possibilities the software development has to offer. It becomes a necessity to learn more and more about everything.<br>
- I’m following the program of Free Code Camp, plus some others sites and advice of what to learn next or in with order should I do it. Sometimes it has been overwhelming. But one day you will wake up and start to match the dots. Those days are beautiful.<br>
-I’m doing a lot of readings and re-readings follow for exercises and personal projects or challenges that help me to build a solid comprehension of how the things works and what are the different ways or approach with you can solve a problem.<br>
-By this moment I’m learning JS and jQuery and I want to jump to Angular.JS as fast as I can. I want to apply all this knowledge on this project. And sooner than leather go for Python and start to work in some real world problems.
-
-      </div>
+    <div id="articlesContainer" ng-repeat="public in posted.art">
+      <h2>{{public.tittle}}</h2>
+      <div>{{public.article}}</div>
     </div>
 
   </article>
-
-
-
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -116,5 +103,7 @@ By this moment I’m learning JS and jQuery and I want to jump to Angular.JS as 
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- The next line tells the browser where to download the JavaScript file you'll be -->
+  <script type="text/javascript" src="js\articles.js"></script>
 </body>
 </html>
