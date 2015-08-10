@@ -13,7 +13,7 @@ var websites =
         "name" : "Camilo Site",
         "description" : "A little challenge",
         "imgFull" : "",
-        "imgThumb" : "cami-thumb.png",
+        "imgThumb" : "cami-thumb.jpg",
         "createdOn" : "Oct-05-2015",
         "gitGub" : "https://github.com/dfm212/CamiloSite",
         "link" : "http://dfm212.github.io/CamiloSite/"
